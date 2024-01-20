@@ -4,7 +4,7 @@ const RealNavbar = () => {
     return (
         <Navbar>
             <NavbarBrand>
-                <p className="font-bold text-inherit">Hi Niel</p>
+                <p className="font-bold text-inherit">Hi</p>
             </NavbarBrand>
             <NavbarContent className="sm:flex gap-4" justify="center">
                 <NavbarItem>
