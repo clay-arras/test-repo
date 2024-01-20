@@ -1,5 +1,14 @@
 import logo from './logo.svg';
 import './App.css';
+import {Button} from "@nextui-org/react";
+import {
+  Dropdown,
+  DropdownTrigger,
+  DropdownMenu,
+  DropdownSection,
+  DropdownItem
+} from "@nextui-org/react";
+
 
 function App() {
   return (
@@ -7,16 +16,27 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          <Button color="primary">
+            Button
+          </Button>
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <Dropdown>
+          <DropdownTrigger>
+            <Button
+                variant="bordered"
+            >
+              Open Menu
+            </Button>
+          </DropdownTrigger>
+          <DropdownMenu aria-label="Static Actions">
+            <DropdownItem key="new">New file</DropdownItem>
+            <DropdownItem key="copy">Copy link</DropdownItem>
+            <DropdownItem key="edit">Edit file</DropdownItem>
+            <DropdownItem key="delete" className="text-danger" color="danger">
+              Delete file
+            </DropdownItem>
+          </DropdownMenu>
+        </Dropdown>
       </header>
     </div>
   );
