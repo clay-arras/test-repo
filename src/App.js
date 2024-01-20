@@ -5,14 +5,15 @@ import {
   Dropdown,
   DropdownTrigger,
   DropdownMenu,
-  DropdownSection,
   DropdownItem
 } from "@nextui-org/react";
+import RealNavbar from "./Navbar";
 
 
 function App() {
   return (
     <div className="App">
+      <RealNavbar />
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
@@ -23,8 +24,7 @@ function App() {
         <Dropdown>
           <DropdownTrigger>
             <Button
-                variant="bordered"
-            >
+                variant="bordered">
               Open Menu
             </Button>
           </DropdownTrigger>
